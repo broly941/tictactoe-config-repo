@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      username: "tictactoe"
+      username: "tictactoe-user"
       password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a"
       host: "localhost"
       port: 27017
