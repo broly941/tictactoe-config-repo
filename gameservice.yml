@@ -1,5 +1,7 @@
 server.port: 40002
 spring:
+  zipkin:
+    baseUrl:  localhost:9411
   data:
     mongodb:
       username: "tictactoe"
@@ -7,3 +9,10 @@ spring:
       host: "localhost"
       port: 27017
       database: "tictactoe"
+
+#Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.tictactoecorp: DEBUG
