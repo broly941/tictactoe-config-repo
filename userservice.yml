@@ -1,5 +1,6 @@
 server.port: 40001
 spring:
+  sleuth.sampler.percentage: 1.0
   zipkin:
     baseUrl:  localhost:9411
   data:
