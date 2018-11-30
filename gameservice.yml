@@ -2,7 +2,7 @@ server.port: 40002
 spring:
   sleuth.sampler.percentage: 1.0
   zipkin:
-    baseUrl:  localhost:9411
+    baseUrl:  mydomain:9411
   data:
     mongodb:
       username: "tictactoe"
