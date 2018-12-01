@@ -8,12 +8,16 @@ zuul:
   debug.request: true
 
 
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 21000
+ribbon:
+  ConnectTimeout: 20000
+  ReadTimeout: 20000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: false
 #        isolation:
 #          thread:
 #            timeoutInMilliseconds:
