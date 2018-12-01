@@ -7,4 +7,14 @@ zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   debug.request: true
 
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds:
+#              30000
