@@ -1,6 +1,6 @@
 zuul:
-  ignored-services: "*"
-  prefix:  /api
+#  ignored-services: "*"
+#  prefix:  /api
   routes:
     userservice: /user/**
     gameservice: /game/**
