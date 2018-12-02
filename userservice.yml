@@ -1,4 +1,5 @@
-server.port: 40001
+server.port: ${PORT:40001}
+
 spring:
   sleuth.sampler.probability: 1.0
   zipkin:

@@ -2,11 +2,15 @@ zuul:
   ignored-services: "*"
   prefix:  /api
   routes:
-    userservice: /user/**
-    gameservice: /game/**
+    webapi: /web/**
+    userservice:
+      path: /user/**
+      stripPrefix: true
+    gameservice:
+      path: /game/**
+      stripPrefix: true
   sensitiveHeaders: Cookie,Set-Cookie
   debug.request: true
-
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 21000
 ribbon:
