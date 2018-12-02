@@ -3,12 +3,12 @@ zuul:
   prefix:  /api
   routes:
     webapi: /web/**
-    userservice:
-      path: /user/**
-      stripPrefix: true
-    gameservice:
-      path: /game/**
-      stripPrefix: true
+#    userservice:
+#      path: /user/**
+#      stripPrefix: true
+#    gameservice:
+#      path: /game/**
+#      stripPrefix: true
   sensitiveHeaders: Cookie,Set-Cookie
   debug.request: true
 
