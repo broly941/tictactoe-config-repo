@@ -15,6 +15,6 @@ spring:
 #Setting logging levels
 logging:
   level:
-    com.netflix: DEBUG
-    org.springframework.web: DEBUG
+    com.netflix: WARN
+    org.springframework.web: WARN
     com.tictactoecorp: DEBUG
