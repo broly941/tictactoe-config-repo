@@ -1,0 +1,25 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #<2>
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+---
+spring:
+  profiles: insecure
+
+---
+spring:
+  profiles: secure
+  security:
+    user:
+      name: "user"
+      password: "{cipher}aac109803d87ddf8b7ff7e589569d1dcf16bf12abb3be400269399baebc3854e" # password
+eureka:
+  instance:
+    metadata-map:
+      user.name: "user"         #These two are needed so that the server
+      user.password: "{cipher}aac109803d87ddf8b7ff7e589569d1dcf16bf12abb3be400269399baebc3854e" # password can access the protected client endpoints
