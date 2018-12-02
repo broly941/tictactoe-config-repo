@@ -11,7 +11,23 @@ spring:
       host: "localhost"
       port: 27017
       database: "tictactoe"
+  security:
+    user:
+      name: "user"
+      password: "{cipher}aac109803d87ddf8b7ff7e589569d1dcf16bf12abb3be400269399baebc3854e" # password
 
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 #Setting logging levels
 logging:
