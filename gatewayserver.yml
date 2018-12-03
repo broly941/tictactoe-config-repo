@@ -2,7 +2,9 @@ zuul:
   ignored-services: "*"
   prefix:  /api
   routes:
-    webapi: /web/**
+    webapi:
+      path: /web/**
+      stripPrefix: true
 #    userservice:
 #      path: /user/**
 #      stripPrefix: true
