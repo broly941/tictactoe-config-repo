@@ -5,6 +5,20 @@ spring:
   zipkin:
     baseUrl:  http://mydomain:9411
 
+eureka:
+  instance:
+    preferIpAddress: true
+    metadata-map:
+      user.name: ${ACTUATOR_USERNAME:actuator}
+      user.password: ${ACTUATOR_PASSWORD:actuator}
+
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 #Setting logging levels
 logging:
   level:
