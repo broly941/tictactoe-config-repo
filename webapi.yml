@@ -5,24 +5,24 @@ spring:
   zipkin:
     baseUrl:  http://mydomain:9411
 
-eureka:
-  instance:
+#eureka:
+#  instance:
 #    preferIpAddress: true
-    metadata-map:
-      user.name: ${ACTUATOR_USERNAME:actuator}
-      user.password: ${ACTUATOR_PASSWORD:actuator}
+#    metadata-map:
+#      user.name: ${ACTUATOR_USERNAME:actuator}
+#      user.password: ${ACTUATOR_PASSWORD:actuator}
 #  client:
 #    registerWithEureka: true
 #    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: ${DISCOVERY_SERVER_URL:http://eureka:password@localhost:8761/eureka/}
 
-management:
-  endpoints:
-    web.exposure.include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+#management:
+#  endpoints:
+#    web.exposure.include: "*"
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
 
 #Setting logging levels
 logging:
