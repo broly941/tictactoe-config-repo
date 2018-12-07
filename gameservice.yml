@@ -8,7 +8,7 @@ spring:
     mongodb:
       username: ${MONGO_USERNAME:tictactoe}
       # tictactoe
-      password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a"
+      password: ${MONGO_PASSWORD:tictactoe}
       host: ${MONGO_HOST:localhost} # for dev
       database: ${MONGO_DATABASE:tictactoe}
 
