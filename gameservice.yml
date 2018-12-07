@@ -8,6 +8,7 @@ spring:
     mongodb:
       username: ${MONGO_INITDB_ROOT_USERNAME:tictactoe}
       password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a" # 123
+      host: mongo
       database: ${MONGO_INITDB_DATABASE:tictactoe}
 
 eureka:
