@@ -7,7 +7,7 @@ spring:
   data:
     mongodb:
       username: ${MONGO_INITDB_ROOT_USERNAME:tictactoe}
-      password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a" # 123
+      password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a"
       host: ${MONGODB_HOST:localhost} # for dev
       database: ${MONGO_INITDB_DATABASE:tictactoe}
 
@@ -16,7 +16,7 @@ eureka:
     # to allow SBA access this service
     metadata-map:
       user.name: "actuator"
-      user.password: "{cipher}8f67106e070e0f99bc30f70e738a707e2d3c9f7855c1ecf26ec8932ce3fa4dbb" # actuator
+      user.password: "{cipher}8f67106e070e0f99bc30f70e738a707e2d3c9f7855c1ecf26ec8932ce3fa4dbb"
 
 # expose actuator for SBA
 management:
