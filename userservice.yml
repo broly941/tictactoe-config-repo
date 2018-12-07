@@ -6,10 +6,11 @@ spring:
     baseUrl:  ${ZIPKIN_URL:http://mydomain:9411}
   data:
     mongodb:
-      username: ${MONGO_INITDB_ROOT_USERNAME:tictactoe}
+      username: ${MONGO_USERNAME:tictactoe}
+      # tictactoe
       password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a"
-      host: ${MONGODB_HOST:localhost} # for dev
-      database: ${MONGO_INITDB_DATABASE:tictactoe}
+      host: ${MONGO_HOST:localhost} # for dev
+      database: ${MONGO_DATABASE:tictactoe}
 
 eureka:
   instance:
