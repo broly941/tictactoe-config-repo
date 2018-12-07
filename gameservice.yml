@@ -1,4 +1,4 @@
-server.port: ${PORT:40002}
+server.port: ${GAME_SERVICE_PORT:40002}
 
 spring:
   sleuth.sampler.probability: 1.0
@@ -6,18 +6,16 @@ spring:
     baseUrl:  ${ZIPKIN_URL:http://mydomain:9411}
   data:
     mongodb:
-      username: ${DATABASE_USER:tictactoe}
+      username: ${MONGO_INITDB_ROOT_USERNAME:tictactoe}
       password: "{cipher}879be42b83745787563d46c454edc5496925c6162c3b792a135601c30eb74d9a" # 123
-      host: ${DATABASE_HOST:localhost}
-      port: ${DATABASE_PORT:27017}
-      database: ${DATABASE_NAME:tictactoe}
+      database: ${MONGO_INITDB_DATABASE:tictactoe}
 
 eureka:
   instance:
     # to allow SBA access this service
     metadata-map:
       user.name: "actuator"
-      user.password: "{cipher}8f67106e070e0f99bc30f70e738a707e2d3c9f7855c1ecf26ec8932ce3fa4dbb"
+      user.password: "{cipher}8f67106e070e0f99bc30f70e738a707e2d3c9f7855c1ecf26ec8932ce3fa4dbb" # actuator
 
 # expose actuator for SBA
 management:
