@@ -25,7 +25,7 @@ management:
 #Setting logging levels
 logging:
   level:
-    com.netflix: DEBUG
-    org.springframework.web: DEBUG
-    org.springframework.security: DEBUG
+    com.netflix: ERROR
+    org.springframework.web: ERROR
+    org.springframework.security: ERROR
     com.tictactoecorp: DEBUG
