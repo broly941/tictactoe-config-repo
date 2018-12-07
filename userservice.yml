@@ -6,9 +6,9 @@ spring:
     baseUrl:  ${ZIPKIN_URL:http://mydomain:9411}
   data:
     mongodb:
-      username: ${MONGO_USERNAME:tictactoe}
+#      username: ${MONGO_USERNAME:tictactoe}
       # tictactoe
-      password: ${MONGO_PASSWORD:tictactoe}
+#      password: ${MONGO_PASSWORD:tictactoe}
       host: ${MONGO_HOST:localhost} # for dev
       database: ${MONGO_DATABASE:tictactoe}
 
