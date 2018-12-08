@@ -4,8 +4,6 @@ spring:
   sleuth.sampler.probability: 1.0
   zipkin:
     baseUrl:  ${ZIPKIN_URL:http://mydomain:9411}
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration
 
 eureka:
   instance:
