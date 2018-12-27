@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/api/web/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 21000
 ribbon:
