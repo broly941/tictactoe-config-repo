@@ -25,3 +25,10 @@ spring:
 server:
   error:
     include-stacktrace: always
+
+#Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    com.tictactoecorp: DEBUG
