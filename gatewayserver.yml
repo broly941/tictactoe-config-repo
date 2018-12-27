@@ -19,7 +19,7 @@ spring:
               - PUT
       routes:
         - id: webapi
-          uri: lb://webapi
+          uri: lb://webapiservice
           predicates:
             - Path=/api/web/**
           filters:
