@@ -3,3 +3,7 @@ server.port: ${WEBAPI_PORT:40010}
 spring:
   profiles:
     include: microservice
+  data:
+    mongodb:
+      host: ${MONGO_HOST:localhost} # for dev
+      database: ${MONGO_DATABASE:tictactoe}
