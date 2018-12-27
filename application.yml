@@ -1,0 +1,27 @@
+server:
+  error:
+    include-stacktrace: never
+
+# expose actuator for SBA
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+spring:
+  zipkin:
+    baseUrl:  ${ZIPKIN_URL:http://localhost:9411}
+  jmx:
+    enabled: false
+
+---
+
+spring:
+  profiles: dev
+  sleuth.sampler.probability: 1.0
+
+server:
+  error:
+    include-stacktrace: always

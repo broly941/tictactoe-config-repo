@@ -1,20 +1,39 @@
-zuul:
-  ignored-services: "*"
-  prefix:  /api
-  routes:
-    webapi:
-      path: /web/**
-      stripPrefix: true
-#    userservice:
-#      path: /user/**
-#      stripPrefix: true
-#    gameservice:
-#      path: /game/**
-#      stripPrefix: true
-  sensitiveHeaders: Cookie,Set-Cookie
-  debug.request: true
+server:
+  port: ${GATEWAY_SERVER_PORT:5555}
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:4200"
+              - "http://localhost:4000"
+            allowedHeaders:
+              - Content-Type
+              - Authorization
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+      routes:
+        - id: webapi
+          uri: lb://webapi
+          predicates:
+            - Path=/api/web/**
+          filters:
+            - StripPrefix=1
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 21000
 ribbon:
   ConnectTimeout: 5000
   ReadTimeout: 5000
+
+# expose actuator for SBA
+management:
+  endpoints:
+    web.exposure.include: health,refresh
+  endpoint:
+    health:
+      show-details: never

@@ -6,9 +6,6 @@ spring:
     baseUrl:  ${ZIPKIN_URL:http://mydomain:9411}
   data:
     mongodb:
-#      username: ${MONGO_USERNAME:tictactoe}
-      # tictactoe
-#      password: ${MONGO_PASSWORD:tictactoe}
       host: ${MONGO_HOST:localhost} # for dev
       database: ${MONGO_DATABASE:tictactoe}
 
@@ -18,18 +15,3 @@ eureka:
     metadata-map:
       user.name: "actuator"
       user.password: "{cipher}8f67106e070e0f99bc30f70e738a707e2d3c9f7855c1ecf26ec8932ce3fa4dbb"
-
-# expose actuator for SBA
-management:
-  endpoints:
-    web.exposure.include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
-
-#Setting logging levels
-logging:
-  level:
-    com.netflix: WARN
-    org.springframework.web: WARN
-    com.tictactoecorp: DEBUG
